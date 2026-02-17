@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+header h1::before {
+    content: '🔵 ';
+}
+
+.subtitle {
+    color: #8b8b9e;
+    font-size: 0.9rem;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.search-box input::placeholder {
+    color: #666;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #0052ff;
+}
+
+.search-btn {
+    background: #0052ff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #0040cc;
+}
+
+.result-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.result-box.hidden {
+    display: none;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item .label {
+    color: #8b8b9e;
+    font-size: 0.9rem;
+}
+
+.result-item .value {
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: right;
+    word-break: break-all;
+    max-width: 60%;
+}
+
+.result-item .value.mono {
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.75rem;
+}
+
+.error-box {
+    background: rgba(255, 80, 80, 0.1);
+    border: 1px solid rgba(255, 80, 80, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    color: #ff5050;
+    text-align: center;
+}
+
+.error-box.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    color: #8b8b9e;
+    font-size: 0.8rem;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #0052ff;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .result-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .result-item .value {
+        max-width: 100%;
+        text-align: left;
+    }
+}

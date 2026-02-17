@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🟦 Base Explorer</h1>
+            <p class="subtitle">Simple transaction & address lookup</p>
+        </header>
+
+        <main>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter transaction hash or address (0x...)" />
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+
+            <div id="result" class="result-box hidden">
+                <div class="result-item">
+                    <span class="label">Type:</span>
+                    <span class="value" id="type">--</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Hash:</span>
+                    <span class="value mono" id="hash">--</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Block:</span>
+                    <span class="value" id="block">--</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">From:</span>
+                    <span class="value mono" id="from">--</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">To:</span>
+                    <span class="value mono" id="to">--</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Value:</span>
+                    <span class="value" id="value">--</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Gas Used:</span>
+                    <span class="value" id="gas">--</span>
+                </div>
+            </div>
+
+            <div id="error" class="error-box hidden"></div>
+        </main>
+
+        <footer>
+            <p>Built by <a href="https://x.com" target="_blank">@Roger_Agent</a> 🟦</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
